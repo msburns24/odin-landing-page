@@ -6,11 +6,7 @@ body {
     flex-direction: column;
 }
 
-header, footer, div {
-    border: 2px solid #f66;
-}
-
-header, .hero {
+header, .hero, footer {
     background-color: #1f2937;
     color: white;
 }
@@ -43,6 +39,10 @@ a {
     color: white;
 }
 
+a:hover {
+    color: #999;
+}
+
 /* Hero */
 .hero {
     padding: 100px 15%;
@@ -52,6 +52,10 @@ a {
 
 .hero-left {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
 }
 
 .hero-title {
@@ -62,18 +66,28 @@ button.hero-signup {
     background-color: #3882f6;
     color: white;
     padding: 8px 24px;
+    border: none;
     border-radius: 8px;
     font-weight: 700;
 }
 
+button.hero-signup:hover {
+    background-color: #2f6ac8;
+}
+
 .hero-right {
-    background-color: #e5e7eb;
     color: #666;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     font-style: italic;
+}
+
+.hero-right img {
+    height: 300px;
+    width: auto;
+    box-shadow: 5px 5px 5px black;
 }
 
 /* Card Section */
@@ -102,16 +116,88 @@ button.hero-signup {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5px;
 }
 
-.card-img {
-    width: 100px;
-    height: 100px;
-    background-color: #e5e7eb;
+.card-img img {
+    height: 150px;
+    width: auto;
+    border-radius: 10px;
 }
 
 /* Quote Block */
 .quote-block {
     background-color: #e5e7eb;
-    padding: 50px 15%;
+    padding: 50px 25%;
+}
+
+.quote-title {
+    font-size: 32px;
+    text-align: center;
+}
+
+.quote-text {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+
+.quote-author {
+    margin-top: 0;
+    font-size: 18px;
+    text-align: right;
+}
+
+/* Action Block */
+
+.action-card {
+    background-color: #3882f6;
+    margin: 50px 15%;
+    padding: 40px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.action-card img {
+    height: 300px;
+    width: auto;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.action-card-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+}
+
+.action-title {
+    font-size: 32px;
+}
+
+
+button.action-signup {
+    background-color: #3882f6;
+    color: white;
+    padding: 8px 24px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+button.action-signup:hover {
+    background-color: #2f6ac8;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
